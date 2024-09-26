@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Filter.css'; // Ensure this is imported for styling
+import './Navbar.css'; // Ensure this is imported for styling
 
 const locations = ['Lisbon', 'Porto'];
 const categories = ['Cafe', 'Pub'];

@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'; // Ensure Font Awesome i
 
 const Map = ({ places }) => {
     const customIcon = new L.DivIcon({
-        html: '<i class="fas fa-map-marker-alt" style="color: red; font-size: 24px;"></i>', // Font Awesome icon
+        html: '<i class="fas fa-map-marker-alt" style="color: #E27DEE; font-size: 24px;"></i>', // Font Awesome icon
         className: 'custom-icon', // Optional: class for additional styling
         iconSize: [24, 24], // Size of the icon
     });

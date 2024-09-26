@@ -1,0 +1,115 @@
+/* Navbar styling */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in height */
+  position: relative; /* Add this to position dropdown menu absolutely */
+  z-index: 100; /* Keep it above other elements if necessary */
+}
+
+/* Navbar content container */
+.navbar-content {
+  width: 100%;
+}
+
+/* Filter container */
+.filter-container {
+  display: flex;
+  gap: 1em;
+}
+
+/* Filter dropdown styling */
+.filter-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* This is needed for positioning the dropdown menu */
+}
+
+/* Dropdown button styling */
+.dropdown-button {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  border-radius: 5px;
+  position: absolute; /* Make it absolute to prevent the navbar's height from increasing */
+  top: 100%; /* Position it directly below the button */
+  left: 0; /* Align it to the left */
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Pill styling */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #E27DEE;
+  color: #fff;
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; /* Ensure space between pills and other elements */
+}
+
+/* Remove button inside pill */
+.pill-remove {
+  cursor: pointer;
+  font-size: 1.5em;
+  padding-left: 0.5em;
+  /* font-weight: bold; */
+}
+
+/* Map container styling */
+.map-container {
+  width: 100%;
+  height: 100vh; /* Adjust as necessary */
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+/* Adjust dropdown position based on pill presence */
+.filter-dropdown.pill-open .dropdown-menu {
+  top: calc(100% + 1em); /* Adjust the offset as needed */
+}
